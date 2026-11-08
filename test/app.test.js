@@ -13,7 +13,7 @@ const {
   escapeHtml,
   DEMO_DATABASE,
   CANADIAN_PROVIDER_DIRECT_LINKS
-} = require('../app.js');
+} = require('../client.js');
 const apiSearch = require('../api/search.js');
 
 describe('HTML Escaping & Security', () => {

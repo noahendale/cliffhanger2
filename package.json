@@ -2,9 +2,8 @@
   "name": "cliffhanger",
   "version": "1.0.0",
   "description": "Cliffhanger 🇨🇦 - Never be left hanging. Find what streaming service a movie or TV show is on in Canada.",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node dev-server.js",
     "test": "node --test"
   },
   "keywords": [],

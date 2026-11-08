@@ -23,10 +23,9 @@ Cliffhanger keeps your API credentials **100% secure**:
 
 ### 1. Start the Server
 ```bash
-cd /Users/noah/.gemini/antigravity/scratch/canstream
 npm start
 ```
-This runs the local development server at `http://localhost:8088/`.
+This runs the local development server at `http://localhost:3000/`.
 
 ### 2. (Optional) Add your Free TMDB Key
 1. Get a free API key at [themoviedb.org/settings/api](https://www.themoviedb.org/settings/api).
