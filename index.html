@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cliffhanger | Where to Watch Movies & TV in Canada</title>
+  <meta name="description" content="Never be left hanging. Find what streaming service a movie or TV show is on in Canada. Instant Canadian streaming availability for Crave, Netflix, Prime Video, Disney+, Apple TV+, and more.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧗</text></svg>">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">🧗</span>
+        <div class="brand-text">
+          <span class="site-title">Cliffhanger</span>
+          <span class="region-pill" aria-label="Region: Canada"><span aria-hidden="true">🇨🇦</span> Canada</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Live Backend Service Indicator -->
+        <div id="backend-status-badge" class="badge badge-active" title="Canadian streaming availability service is live">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span id="backend-status-text">Canada Live</span>
+        </div>
+
+        <!-- Accessible Theme Switcher -->
+        <fieldset class="theme-switcher" role="radiogroup" aria-label="Theme preference">
+          <legend class="visually-hidden">Choose color theme</legend>
+          <label class="theme-option" title="Use light theme">
+            <input type="radio" name="theme" value="light" id="theme-light">
+            <span class="theme-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            </span>
+            <span class="theme-label">Light</span>
+          </label>
+
+          <label class="theme-option" title="Use system theme">
+            <input type="radio" name="theme" value="system" id="theme-system" checked>
+            <span class="theme-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </span>
+            <span class="theme-label">System</span>
+          </label>
+
+          <label class="theme-option" title="Use dark theme">
+            <input type="radio" name="theme" value="dark" id="theme-dark">
+            <span class="theme-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </span>
+            <span class="theme-label">Dark</span>
+          </label>
+        </fieldset>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="main-content">
+    <div class="container hero-container">
+      <section class="hero-section" aria-labelledby="hero-title">
+        <h1 id="hero-title" class="hero-title">Find Where to Stream in Canada</h1>
+        <p class="hero-description">Discover which streaming services have your favorite movies and TV shows in Canada.</p>
+
+        <!-- Search Form -->
+        <search role="search">
+          <form id="search-form" class="search-form" novalidate>
+            <div class="search-input-wrapper">
+              <label for="search-input" class="visually-hidden">Search for a movie or TV show by title</label>
+              <div class="input-icon-group">
+                <span class="search-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </span>
+                <input 
+                  type="search" 
+                  id="search-input" 
+                  name="q" 
+                  class="search-input" 
+                  placeholder="Enter a title (e.g. The Last of Us, Dune, Crave originals...)" 
+                  required 
+                  autocomplete="off" 
+                  autocapitalize="words" 
+                  spellcheck="false"
+                  aria-required="true"
+                  aria-describedby="search-tip"
+                >
+                <button type="button" id="clear-search-btn" class="clear-btn" aria-label="Clear search input" hidden>
+                  <span aria-hidden="true">✕</span>
+                </button>
+              </div>
+              <button type="submit" id="search-submit-btn" class="btn btn-search">
+                <span class="btn-text">Find Streaming Service</span>
+                <span class="spinner" aria-hidden="true" hidden></span>
+              </button>
+            </div>
+            
+            <div class="search-options">
+              <span id="search-tip" class="search-tip">
+                Tip: Press <kbd class="kbd">/</kbd> to search anytime
+              </span>
+
+              <!-- Filter tabs: All, Movies, TV Shows -->
+              <fieldset class="media-type-filter" role="radiogroup" aria-label="Filter results by type">
+                <legend class="visually-hidden">Filter by media type</legend>
+                <label class="filter-chip">
+                  <input type="radio" name="mediaType" value="all" checked>
+                  <span>All</span>
+                </label>
+                <label class="filter-chip">
+                  <input type="radio" name="mediaType" value="movie">
+                  <span>Movies</span>
+                </label>
+                <label class="filter-chip">
+                  <input type="radio" name="mediaType" value="tv">
+                  <span>TV Shows</span>
+                </label>
+              </fieldset>
+            </div>
+          </form>
+        </search>
+
+        <!-- Quick Search Suggestions -->
+        <div class="quick-tags" aria-label="Popular Canadian streaming titles to test">
+          <span class="quick-tags-label">Popular in Canada:</span>
+          <button type="button" class="tag-btn" data-query="The Last of Us">The Last of Us</button>
+          <button type="button" class="tag-btn" data-query="Dune: Part Two">Dune: Part Two</button>
+          <button type="button" class="tag-btn" data-query="Succession">Succession</button>
+          <button type="button" class="tag-btn" data-query="Schitt's Creek">Schitt's Creek</button>
+          <button type="button" class="tag-btn" data-query="Fallout">Fallout</button>
+        </div>
+      </section>
+
+      <!-- Live Notification Region for Screen Readers -->
+      <div id="status-live-region" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+
+      <!-- Results Section -->
+      <section id="results-section" class="results-section" aria-labelledby="results-heading" hidden>
+        <div class="results-header">
+          <h2 id="results-heading" class="results-heading">Search Results</h2>
+          <span id="results-count" class="results-count" aria-live="polite"></span>
+        </div>
+
+        <div id="results-container" class="results-grid" role="list">
+          <!-- Dynamic Results Injected Here -->
+        </div>
+      </section>
+
+      <!-- Empty / Error / Welcome State Messages -->
+      <div id="state-message" class="state-message" hidden>
+        <!-- Dynamic State Message -->
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-container">
+      <p class="attribution-text">
+        Streaming availability data for Canada is sourced via <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">TMDB</a> and powered by <a href="https://www.justwatch.com/ca" target="_blank" rel="noopener noreferrer">JustWatch</a>.
+      </p>
+      <p class="disclaimer-text">
+        Cliffhanger is not endorsed or certified by TMDB. All streaming logos and trademarks belong to their respective owners.
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
