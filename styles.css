@@ -9,7 +9,7 @@
    -------------------------------------------------------------------------- */
 :root {
   color-scheme: light;
-  
+
   /* Backgrounds */
   --bg-page: #f8fafc;
   --bg-surface: #ffffff;
@@ -18,9 +18,12 @@
   --bg-hover: #e2e8f0;
 
   /* Text & Foreground (Strictly >= 4.5:1 contrast against respective bg) */
-  --text-primary: #0f172a;        /* 15.6:1 contrast against #f8fafc */
-  --text-secondary: #334155;      /* 7.3:1 contrast against #f8fafc */
-  --text-muted: #475569;          /* 5.1:1 contrast against #f8fafc */
+  --text-primary: #0f172a;
+  /* 15.6:1 contrast against #f8fafc */
+  --text-secondary: #334155;
+  /* 7.3:1 contrast against #f8fafc */
+  --text-muted: #475569;
+  /* 5.1:1 contrast against #f8fafc */
   --text-inverse: #ffffff;
 
   /* Borders & Dividers (Strictly >= 3:1 against bg for UI components) */
@@ -28,7 +31,8 @@
   --border-strong: #94a3b8;
 
   /* Accent Colors (Canadian red motif with WCAG AA compliance) */
-  --color-primary: #c5221f;       /* Deep Maple Red - 5.2:1 against white */
+  --color-primary: #c5221f;
+  /* Deep Maple Red - 5.2:1 against white */
   --color-primary-hover: #9f1a17;
   --color-primary-focus: #c5221f;
   --color-primary-subtle: #fef2f2;
@@ -36,15 +40,18 @@
 
   /* Streaming status badges */
   --badge-stream-bg: #ecfdf5;
-  --badge-stream-text: #065f46;  /* 6.3:1 against #ecfdf5 */
+  --badge-stream-text: #065f46;
+  /* 6.3:1 against #ecfdf5 */
   --badge-stream-border: #a7f3d0;
 
   --badge-rent-bg: #eff6ff;
-  --badge-rent-text: #1e40af;    /* 7.1:1 against #eff6ff */
+  --badge-rent-text: #1e40af;
+  /* 7.1:1 against #eff6ff */
   --badge-rent-border: #bfdbfe;
 
   --badge-demo-bg: #fef3c7;
-  --badge-demo-text: #92400e;    /* 5.5:1 against #fef3c7 */
+  --badge-demo-text: #92400e;
+  /* 5.5:1 against #fef3c7 */
   --badge-demo-border: #fde68a;
 
   /* Focus Indicator (High visibility 3px outline) */
@@ -69,22 +76,26 @@
    -------------------------------------------------------------------------- */
 [data-theme="dark"] {
   color-scheme: dark;
-  
+
   --bg-page: #0b1120;
   --bg-surface: #1e293b;
   --bg-surface-elevated: #283548;
   --bg-subtle: #182234;
   --bg-hover: #334155;
 
-  --text-primary: #f8fafc;        /* 15.2:1 against #0b1120 */
-  --text-secondary: #cbd5e1;      /* 9.8:1 against #0b1120 */
-  --text-muted: #94a3b8;          /* 5.3:1 against #0b1120 */
+  --text-primary: #f8fafc;
+  /* 15.2:1 against #0b1120 */
+  --text-secondary: #cbd5e1;
+  /* 9.8:1 against #0b1120 */
+  --text-muted: #94a3b8;
+  /* 5.3:1 against #0b1120 */
   --text-inverse: #0f172a;
 
   --border-color: #334155;
   --border-strong: #64748b;
 
-  --color-primary: #ef4444;       /* 5.1:1 on #0b1120 */
+  --color-primary: #ef4444;
+  /* 5.1:1 on #0b1120 */
   --color-primary-hover: #f87171;
   --color-primary-focus: #f87171;
   --color-primary-subtle: #451a1a;
@@ -112,7 +123,7 @@
 @media (prefers-color-scheme: dark) {
   [data-theme="system"] {
     color-scheme: dark;
-    
+
     --bg-page: #0b1120;
     --bg-surface: #1e293b;
     --bg-surface-elevated: #283548;
@@ -155,7 +166,9 @@
 /* --------------------------------------------------------------------------
    Reset & Base Styles
    -------------------------------------------------------------------------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -224,7 +237,10 @@ body {
 
 /* Respect Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -262,6 +278,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .brand {
@@ -370,6 +387,7 @@ body {
   .theme-label {
     display: none;
   }
+
   .theme-option {
     padding: 0.35rem;
   }
@@ -568,7 +586,7 @@ body {
   font-family: inherit;
   font-size: 0.75rem;
   font-weight: 700;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .media-type-filter {
@@ -859,7 +877,7 @@ body {
   border-radius: 6px;
   object-fit: cover;
   flex-shrink: 0;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 .external-arrow {
@@ -952,7 +970,9 @@ body {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -1066,4 +1086,3 @@ body {
 .disclaimer-text {
   font-size: 0.8125rem;
 }
-
